@@ -2,7 +2,7 @@ google.com, pub-1656783999198145, DIRECT, f08c47fec0942fa0
 google.com, pub-1656783999198145, DIRECT, f08c47fec0942fa0
 facebook.com, 192130272201599, RESELLER, c3e20eee3f780d68
 applovin.com, a72090635d067648a63be5aa598201cf, DIRECT
-
+ironsrc.com, 299927, DIRECT
 
 rubiconproject.com, 24400, RESELLER, 0bfd66d529a55807
 video.unrulymedia.com, 2464975885, RESELLER
@@ -893,3 +893,4 @@ lijit.com, 222372, RESELLER, fafdf38b16bf6b2b
 castify.ai,1295183, RESELLER
 rubiconproject.com,25336,RESELLER, 0bfd66d529a55807
 video.unrulymedia.com, 848837292, RESELLER
+
