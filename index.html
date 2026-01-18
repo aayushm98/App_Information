@@ -13,7 +13,7 @@
     width: 80px;         /* Standard professional size */
     height: 80px;
     border-radius: 18px; /* Smooth rounded corners like Play Store */
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     object-fit: cover;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 
                 0 0 10px rgba(0, 210, 255, 0.2); /* Soft glow */
@@ -184,11 +184,48 @@
             header h1 { font-size: 2.2rem; }
             .container { margin-top: -40px; }
         }
+
+/* Starfield Container */
+#starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh; /* Matches your header height */
+    z-index: 0; /* Sits behind the text */
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: drift linear infinite;
+}
+
+@keyframes drift {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100vh); }
+}
+
+/* Ensure header content stays above stars */
+header {
+    position: relative; /* Required to make z-index work */
+    overflow: hidden;
+}
+
+header img, header h1, header .tagline {
+    position: relative;
+    z-index: 10; /* Keeps your logo and text in front */
+}
+        
     </style>
 </head>
 <body>
 
     <header>
+        <div id="starfield"></div>
         <img src="Kreedo Marvel logo.png" alt="Kreedo Marvel Logo" class="dev-logo">
         <h1>Kreedo Marvel</h1>
         <div class="tagline">Digital Fun for Every Desi Home</div>
@@ -229,9 +266,37 @@
             &copy; 2026 Kreedo Marvel. All Rights Reserved.
         </footer>
     </div>
-
+<script>
+    function createStars() {
+        const container = document.getElementById('starfield');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            // Random size between 1px and 3px
+            const size = Math.random() * 3 + 'px';
+            star.style.width = size;
+            star.style.height = size;
+            
+            // Random position
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            
+            // Random drift speed
+            const duration = Math.random() * 50 + 50 + 's';
+            star.style.animationDuration = duration;
+            
+            // Random delay so they don't all start at once
+            star.style.animationDelay = Math.random() * -100 + 's';
+            
+            container.appendChild(star);
+        }
+    }
+    createStars();
+</script>
 </body>
 </html>
+
 
 
 
