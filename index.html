@@ -6,6 +6,23 @@
     <title>Kreedo Marvel | Games for the Indian Family</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+
+        /* Styling for the App Icons inside cards */
+.app-icon {
+    width: 80px;         /* Standard professional size */
+    height: 80px;
+    border-radius: 18px; /* Smooth rounded corners like Play Store */
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 
+                0 0 10px rgba(0, 210, 255, 0.2); /* Soft glow */
+    transition: transform 0.3s ease;
+}
+
+.card:hover .app-icon {
+    transform: scale(1.1) rotate(3deg); /* Subtle animation on hover */
+}
+        
         :root {
             --primary-bg: #0b0f1a;
             --card-bg: rgba(255, 255, 255, 0.03);
@@ -160,17 +177,20 @@
     <div class="container">
         <div class="grid">
             <div class="card">
-                <i class="fas fa-masks-theater"></i>
+                <img src="logo_actout.png" alt="ActOut Logo" class="app-icon">
                 <h3>ActOut!</h3>
                 <p style="color: var(--text-dim)">The ultimate Desi Charades game designed for the big Indian family. Bring the party to life!</p>
                 <a href="https://play.google.com/store/apps/details?id=com.freelancing.actout" class="btn">DOWNLOAD APP</a>
+
+                
             </div>
 
             <div class="card">
-                <i class="fas fa-tablets"></i>
+                <img src="logo_ticktalk.png" alt="ActOut Logo" class="app-icon">
                 <h3>Tick Talk Tambola</h3>
                 <p style="color: var(--text-dim)">Automated number calling and digital tickets for your favorite household game.</p>
                 <a href="https://play.google.com/store/apps/details?id=com.freelancing.numbercallerlockdowntambola" class="btn">DOWNLOAD APP</a>
+
             </div>
         </div>
     </div>
@@ -192,5 +212,6 @@
 
 </body>
 </html>
+
 
 
