@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kreedo Marvel | Indie Game Developer</title>
+    <title>Kreedo Marvel | Games for the Indian Family</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-bg: #0f172a;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --accent-color: #8b5cf6;
-            --text-main: #f8fafc;
+            --primary-bg: #0b0f1a;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --accent-color: #00d2ff; /* A sleek cyan for a tech/gaming feel */
+            --accent-gradient: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            --text-main: #ffffff;
             --text-dim: #94a3b8;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--primary-bg);
             color: var(--text-main);
             margin: 0;
@@ -23,135 +24,171 @@
         }
 
         header {
-            height: 60vh;
+            padding: 80px 20px 100px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            background: radial-gradient(circle at top, #1e293b 0%, #0b0f1a 100%);
             text-align: center;
-            padding: 20px;
+        }
+
+        /* Logo Styling */
+        .dev-logo {
+            width: 120px; /* Adjust size as needed */
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.3));
         }
 
         header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, #fff, var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: -1px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            color: var(--accent-color);
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
         }
 
         .container {
-            max-width: 1000px;
-            margin: -50px auto 50px auto;
+            max-width: 1100px;
+            margin: -60px auto 50px auto;
             padding: 20px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
         .card {
             background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 30px;
-            transition: transform 0.3s ease;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-align: center;
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
+            background: rgba(255, 255, 255, 0.06);
             border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
         .card i {
-            font-size: 3rem;
-            color: var(--accent-color);
+            font-size: 2.5rem;
             margin-bottom: 20px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .btn {
             display: inline-block;
-            background: var(--accent-color);
+            background: var(--accent-gradient);
             color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
+            padding: 14px 30px;
+            border-radius: 12px;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: opacity 0.3s;
+            font-weight: 700;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
         }
 
-        .footer-links {
-            margin-top: 50px;
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .footer-section {
+            margin-top: 80px;
+            background: rgba(0,0,0,0.2);
+            padding: 60px 20px;
+            border-radius: 40px 40px 0 0;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
         }
 
-        .footer-links a {
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .legal-links a {
             color: var(--text-dim);
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            transition: 0.3s;
         }
 
-        .footer-links a:hover {
-            color: var(--accent-color);
+        .legal-links a:hover {
+            border-color: var(--accent-color);
+            color: white;
         }
 
-        .badge {
-            font-size: 0.8rem;
-            background: rgba(139, 92, 246, 0.2);
-            padding: 5px 12px;
-            border-radius: 15px;
-            color: var(--accent-color);
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.2rem; }
+            .container { margin-top: -40px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <p class="badge">Professional Game Developer</p>
+        <img src="logo.png" alt="Kreedo Marvel Logo" class="dev-logo">
         <h1>Kreedo Marvel</h1>
-        <p style="color: var(--text-dim); max-width: 600px;">Crafting engaging casual gaming experiences for the modern Indian family.</p>
+        <div class="tagline">Digital Fun for Every Desi Home</div>
     </header>
 
     <div class="container">
         <div class="grid">
             <div class="card">
-                <i class="fas fa-theater-masks"></i>
+                <i class="fas fa-masks-theater"></i>
                 <h3>ActOut!</h3>
-                <p>The ultimate Desi Charades game for family gatherings. 10k+ Downloads.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.freelancing.actout" class="btn">Get it on Play Store</a>
+                <p style="color: var(--text-dim)">The ultimate Desi Charades game designed for the big Indian family. Bring the party to life!</p>
+                <a href="https://play.google.com/store/apps/details?id=com.freelancing.actout" class="btn">DOWNLOAD APP</a>
             </div>
 
             <div class="card">
-                <i class="fas fa-dice"></i>
+                <i class="fas fa-tablets"></i>
                 <h3>Tick Talk Tambola</h3>
-                <p>A modern twist on the classic Tambola experience. Perfect for lockdown fun.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.freelancing.numbercallerlockdowntambola" class="btn">Get it on Play Store</a>
+                <p style="color: var(--text-dim)">Automated number calling and digital tickets for your favorite household game.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.freelancing.numbercallerlockdowntambola" class="btn">DOWNLOAD APP</a>
             </div>
-        </div>
-
-        <div class="footer-links">
-            <h3>Support & Legal</h3>
-            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px;">
-                Required files for Google Play Console compliance:
-            </p>
-            <a href="app-ads.txt"><i class="fas fa-file-code"></i> app-ads.txt</a>
-            <a href="https://docs.google.com/document/d/1tV4I28M9BOwtvHaGCKw2sWVh81i8ayzl/edit"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
-            <a href="mailto:kreedo.tech@gmail.com"><i class="fas fa-user-minus"></i> Request Data Deletion</a>
         </div>
     </div>
 
-    <footer style="text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.8rem;">
-        &copy; 2026 Kreedo Marvel. Built with passion for Indian Gamers.
-    </footer>
+    <div class="footer-section">
+        <h3 style="margin-bottom: 10px;">Developer Resources</h3>
+        <p style="color: var(--text-dim)">Official support and compliance documentation</p>
+        
+        <div class="legal-links">
+            <a href="app-ads.txt">app-ads.txt</a>
+            <a href="https://docs.google.com/document/d/1tV4I28M9BOwtvHaGCKw2sWVh81i8ayzl/edit">Privacy Policy</a>
+            <a href="mailto:kreedo.tech@gmail.com">Data Deletion Request</a>
+        </div>
+
+        <footer style="margin-top: 50px; color: #4b5563; font-size: 0.8rem;">
+            &copy; 2026 Kreedo Marvel. All Rights Reserved.
+        </footer>
+    </div>
 
 </body>
 </html>
