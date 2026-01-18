@@ -42,13 +42,17 @@
         }
 
         header {
-            padding: 80px 20px 100px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: radial-gradient(circle at top, #1e293b 0%, #0b0f1a 100%);
-            text-align: center;
+          height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* This creates the dark, deep space "vibe" */
+    background: radial-gradient(circle at center, #1a1c2c 0%, #0b0f1a 100%);
+    text-align: center;
+    padding: 20px;
+    position: relative; /* This is CRITICAL for the stars to stay inside */
+    overflow: hidden;    /* This hides stars that drift outside the header */
         }
 
         /* Logo Styling */
@@ -226,7 +230,7 @@ header img, header h1, header .tagline {
 
     <header>
         <div id="starfield"></div>
-        <img src="Kreedo Marvel logo.png" alt="Kreedo Marvel Logo" class="dev-logo">
+      
         <h1>Kreedo Marvel</h1>
         <div class="tagline">Digital Fun for Every Desi Home</div>
     </header>
@@ -251,7 +255,7 @@ header img, header h1, header .tagline {
             </div>
         </div>
     </div>
-
+  <img src="Kreedo Marvel logo.png" alt="Kreedo Marvel Logo" class="dev-logo">
     <div class="footer-section">
         <h3 style="margin-bottom: 10px;">Developer Resources</h3>
         <p style="color: var(--text-dim)">Official support and compliance documentation</p>
@@ -296,6 +300,7 @@ header img, header h1, header .tagline {
 </script>
 </body>
 </html>
+
 
 
 
