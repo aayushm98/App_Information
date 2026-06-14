@@ -117,7 +117,7 @@
             gap: 30px;
         }
 
-        .card {
+       .card {
             background: var(--card-bg);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255,255,255,0.08);
@@ -125,6 +125,8 @@
             padding: 40px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-align: center;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -150,7 +152,7 @@
             border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            margin-top: 25px;
+            margin-top: auto;
             font-size: 0.9rem;
             transition: transform 0.2s;
         }
@@ -245,13 +247,14 @@ header img, header h1, header .tagline {
         <div class="grid">
                  <div class="card">
                 <img src="logo_wordnerd.png" alt="WordNerd Logo" class="app-icon">
-                <h3>WordNerd</h3>
-                <p style="color: var(--text-dim)">Master GRE, GMAT,SAT,IELTS, TOEFL vocabulary with smart flashcards and spaced repetition. Own every word.</p>
+                <h3>WordNerd: Vocubulary Builder</h3>
+                <p style="color: var(--text-dim)">Master GRE, GMAT, SAT, IELTS, TOEFL vocabulary with smart flashcards and spaced repetition. Own every word.</p>
+                   
                 <a href="https://play.google.com/store/apps/details?id=com.kreedoMarvel.wordnerd" class="btn">DOWNLOAD APP</a>
             </div>
             <div class="card">
                 <img src="logo_actout.png" alt="ActOut Logo" class="app-icon">
-                <h3>ActOut!</h3>
+                <h3>ActOut! - Desi Charades Game!</h3>
                 <p style="color: var(--text-dim)">The ultimate Desi Charades game designed for the big Indian family. Bring the party to life!</p>
                 <a href="https://play.google.com/store/apps/details?id=com.freelancing.actout" class="btn">DOWNLOAD APP</a>
 
