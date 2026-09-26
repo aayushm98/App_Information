@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — KreedoMarvel</title>
+  <title>Privacy Policy | KreedoMarvel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -14,6 +14,7 @@
       --nerd-red:   #E94560;
       --teal:       #0F9B8E;
       --gold:       #F5A623;
+      --ember:      #F28C28;
       --white:      #F0F4F8;
       --muted:      #8892A4;
       --border:     rgba(240,244,248,0.09);
@@ -162,6 +163,7 @@
     .app-card.wn::before  { background: var(--nerd-red); }
     .app-card.ao::before  { background: var(--gold); }
     .app-card.tt::before  { background: var(--teal); }
+    .app-card.sn::before  { background: var(--ember); }
     .card-head {
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; gap: 8px; margin-bottom: 1.1rem;
@@ -175,6 +177,7 @@
     .wn .card-badge { color: var(--nerd-red); background: rgba(233,69,96,.12); border: 1px solid rgba(233,69,96,.25); }
     .ao .card-badge { color: var(--gold); background: rgba(245,166,35,.12); border: 1px solid rgba(245,166,35,.25); }
     .tt .card-badge { color: var(--teal); background: rgba(15,155,142,.12); border: 1px solid rgba(15,155,142,.25); }
+    .sn .card-badge { color: var(--ember); background: rgba(242,140,40,.12); border: 1px solid rgba(242,140,40,.25); }
 
     /* TABLE */
     table { width: 100%; border-collapse: collapse; font-size: 14px; }
@@ -237,9 +240,10 @@
 </section>
 
 <div class="app-tags">
-  <span class="tag"><span class="tag-dot" style="background:var(--nerd-red)"></span>WordNerd — Vocabulary Flashcards</span>
+  <span class="tag"><span class="tag-dot" style="background:var(--nerd-red)"></span>WordNerd: Vocabulary Flashcards</span>
   <span class="tag"><span class="tag-dot" style="background:var(--gold)"></span>ActOut: Desi Charades</span>
   <span class="tag"><span class="tag-dot" style="background:var(--teal)"></span>Tick Talk Tambola</span>
+  <span class="tag"><span class="tag-dot" style="background:var(--ember)"></span>SiteNerd: Construction Calc</span>
 </div>
 
 <hr class="divider" />
@@ -251,13 +255,14 @@
     <div class="sec-head"><div class="sec-num">01</div><h2>Introduction &amp; Scope</h2></div>
     <p>This Privacy Policy applies to all Android applications published on the Google Play Store by <strong>KreedoMarvel</strong> (also referred to as "we", "our", or "us"), developed by Aayush Mathur. The apps currently covered are:</p>
     <ul>
-      <li><strong>WordNerd — Vocabulary Flashcards</strong> (com.kreedoMarvel.wordnerd)</li>
+      <li><strong>WordNerd: Vocabulary Flashcards</strong> (com.kreedoMarvel.wordnerd)</li>
       <li><strong>ActOut: Desi Charades</strong></li>
       <li><strong>Tick Talk Tambola</strong></li>
+      <li><strong>SiteNerd: Construction Calc</strong> (com.kreedomarvel.sitenerd)</li>
     </ul>
     <p>By installing or using any of these apps, you agree to the data practices described in this policy. If you do not agree, please do not use the Services. Questions? Email us at <a href="mailto:kreedo.tech@gmail.com">kreedo.tech@gmail.com</a>.</p>
     <div class="hl">
-      <strong>Plain English summary:</strong> We do not collect your name, email, phone number, or location. We do not require account creation. The data listed below is collected by standard third-party SDKs (Google Firebase and AdMob) — not by us directly — to keep the apps running, fix crashes, and display ads on the free tier.
+      <strong>Plain English summary:</strong> We do not collect your name, email, phone number, or location. We do not require account creation. The data listed below is collected by standard third-party SDKs (Google Firebase and AdMob in WordNerd, ActOut and Tick Talk; AdMob only in SiteNerd, which uses no Firebase at all) to keep the apps running, fix crashes, and display ads on the free tier.
     </div>
   </div>
 
@@ -269,7 +274,7 @@
     <!-- WordNerd -->
     <div class="app-card wn">
       <div class="card-head">
-        <span class="card-title">WordNerd — GRE Vocabulary Flashcards</span>
+        <span class="card-title">WordNerd: GRE Vocabulary Flashcards</span>
         <span class="card-badge">WordNerd</span>
       </div>
       <table>
@@ -277,7 +282,7 @@
         <tbody>
           <tr>
             <td>Google AdMob</td>
-            <td>Serves banner, interstitial, native, and rewarded ads to <strong>free-tier users only</strong>. AdMob collects your Android Advertising ID (AAID) and general location (country/region inferred from IP) to serve personalised ads. You can opt out of ad personalisation via <em>Settings → Google → Ads</em> on your device. Platinum users: AdMob is fully disabled — zero ads, zero AdMob data collection.</td>
+            <td>Serves banner, interstitial, native, and rewarded ads to <strong>free-tier users only</strong>. AdMob collects your Android Advertising ID (AAID) and general location (country/region inferred from IP) to serve personalised ads. You can opt out of ad personalisation via <em>Settings → Google → Ads</em> on your device. Platinum users: AdMob is fully disabled, with zero ads and zero AdMob data collection.</td>
           </tr>
           <tr>
             <td>Firebase Analytics</td>
@@ -360,12 +365,49 @@
         </tbody>
       </table>
     </div>
+
+    <!-- SiteNerd -->
+    <div class="app-card sn">
+      <div class="card-head">
+        <span class="card-title">SiteNerd: Construction Calc</span>
+        <span class="card-badge">SiteNerd</span>
+      </div>
+      <table>
+        <thead><tr><th>SDK / Data</th><th>What is collected &amp; why</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Google AdMob</td>
+            <td>Serves banner, interstitial, app-open, and rewarded ads to <strong>free-tier users only</strong>. AdMob collects your Android Advertising ID (AAID) and general location (country/region inferred from IP) to serve personalised ads. You can choose less personalised ads in the app under <em>Settings → Ad personalisation</em>, or opt out device-wide via <em>Settings → Google → Ads</em>. Pro users: AdMob is fully disabled, with zero ads and zero AdMob data collection.</td>
+          </tr>
+          <tr>
+            <td>No Firebase Analytics</td>
+            <td>SiteNerd contains no analytics SDK. In-app events are written to a small on-device log used only for diagnostics, and are never transmitted anywhere.</td>
+          </tr>
+          <tr>
+            <td>No Firebase Crashlytics</td>
+            <td>Crash statistics come from Google Play Android vitals, governed by Google's policies. A last-error log (message, truncated stack, timestamp, app version) may be kept on-device to help with support requests. It is never uploaded.</td>
+          </tr>
+          <tr>
+            <td>Google Play Billing</td>
+            <td>Processes the one-time Pro unlock payment ($5.99 / ₹499). All payment handling is done entirely by Google. We receive only the entitlement (Pro active or not active) and never see, store, or process your payment card or billing details.</td>
+          </tr>
+          <tr>
+            <td>Local device storage <br/><small>(never transmitted)</small></td>
+            <td>Your measurements, saved calculations, job folders, history, favorites, settings, theme, and consent choice are stored only on your device. This data is <strong>never uploaded to any server</strong>. It is permanently deleted when you uninstall the app.</td>
+          </tr>
+          <tr>
+            <td>Accounts &amp; notifications</td>
+            <td>SiteNerd has no accounts, no sign-in, and sends no push notifications.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <!-- 3 -->
   <div class="sec">
     <div class="sec-head"><div class="sec-num">03</div><h2>What We Do Not Collect</h2></div>
-    <p>Across all three apps, we <strong>never</strong> collect:</p>
+    <p>Across all four apps, we <strong>never</strong> collect:</p>
     <ul>
       <li>Your name, email address, phone number, or any account credentials</li>
       <li>Your precise GPS location or IP address</li>
@@ -404,7 +446,7 @@
         </tr>
       </tbody>
     </table>
-    <p style="margin-top:1rem;">To control ad personalisation on your device: <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>. On Android 12+, you can also reset your Advertising ID or delete it entirely.</p>
+    <p style="margin-top:1rem;">To control ad personalisation on your device: <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>. On Android 12+, you can also reset your Advertising ID or delete it entirely. SiteNerd additionally offers an in-app choice under <strong>Settings → Ad personalisation</strong>.</p>
   </div>
 
   <!-- 5 -->
@@ -412,9 +454,9 @@
     <div class="sec-head"><div class="sec-num">05</div><h2>Legal Basis for Processing (GDPR — EEA &amp; UK Users)</h2></div>
     <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, the following legal bases apply to how data is processed through our apps:</p>
     <ul>
-      <li><strong>Legitimate interests</strong> — Firebase Analytics and Crashlytics are used to improve app performance and fix crashes. This processing is in the legitimate interest of providing a stable, improving product.</li>
-      <li><strong>Consent</strong> — AdMob personalised advertising relies on your consent via your device's ad personalisation setting. You may withdraw consent at any time by opting out of personalised ads in your Android settings.</li>
-      <li><strong>Contract performance</strong> — Google Play Billing data is processed to fulfil your purchase of the Platinum unlock.</li>
+      <li><strong>Legitimate interests</strong> — Firebase Analytics and Crashlytics (WordNerd, ActOut, Tick Talk) and Play Android vitals (SiteNerd) are used to improve app performance and fix crashes. This processing is in the legitimate interest of providing a stable, improving product.</li>
+      <li><strong>Consent</strong> — AdMob personalised advertising relies on your consent via your device's ad personalisation setting (and SiteNerd's in-app choice). You may withdraw consent at any time by opting out of personalised ads in your Android settings.</li>
+      <li><strong>Contract performance</strong> — Google Play Billing data is processed to fulfil your purchase of the Platinum or Pro unlock.</li>
     </ul>
     <div class="hl hl-warn">
       <strong>EEA / UK users:</strong> If you believe your data is being processed unlawfully, you have the right to lodge a complaint with your national data protection authority (e.g. ICO in the UK, or your EU Member State's supervisory authority).
@@ -457,7 +499,8 @@
   <div class="sec">
     <div class="sec-head"><div class="sec-num">07</div><h2>Data Retention &amp; Deletion</h2></div>
     <p><strong>Local app data (WordNerd):</strong> All study progress, streaks, bookmarks, and notes are stored only on your device. Uninstalling the app permanently deletes this data. We cannot recover it once deleted.</p>
-    <p><strong>Firebase data:</strong> Crash reports and analytics events are retained by Google per their standard data retention policies (typically 90 days for Crashlytics, configurable for Analytics). This data is not linked to any identifiable user on our end.</p>
+    <p><strong>Local app data (SiteNerd):</strong> All calculations, history, job folders, favorites, and settings are stored only on your device. Uninstalling the app permanently deletes this data. We cannot recover it once deleted. The optional Erase All Data control in Settings deletes it without uninstalling.</p>
+    <p><strong>Firebase data:</strong> Crash reports and analytics events are retained by Google per their standard data retention policies (typically 90 days for Crashlytics, configurable for Analytics). This data is not linked to any identifiable user on our end. SiteNerd sends nothing to Firebase.</p>
     <p><strong>AdMob data:</strong> Ad impression and interaction data is managed by Google per their advertising data policies.</p>
     <p><strong>Payment data:</strong> We retain no payment records. All transaction history is managed by Google Play.</p>
   </div>
@@ -472,7 +515,7 @@
   <!-- 9 -->
   <div class="sec">
     <div class="sec-head"><div class="sec-num">09</div><h2>Security</h2></div>
-    <p>Because we do not transmit personal data to our own servers, the attack surface is minimal. Local data in WordNerd (progress, notes, preferences) is stored in the app's private sandboxed storage on your device, inaccessible to other apps.</p>
+    <p>Because we do not transmit personal data to our own servers, the attack surface is minimal. Local data (WordNerd study data; SiteNerd calculations, history, jobs, and settings) is stored in each app's private sandboxed storage on your device, inaccessible to other apps.</p>
     <p>For data processed by Firebase and AdMob, Google's enterprise-grade security infrastructure applies. No electronic system is 100% secure, but we have taken reasonable steps to minimise risk within our control.</p>
   </div>
 
@@ -491,7 +534,7 @@
       <li><strong>Android 12 and above:</strong> Settings → Privacy → Ads → Delete Advertising ID</li>
       <li><strong>Android 11 and below:</strong> Settings → Google → Ads → Opt out of Ads Personalisation</li>
     </ul>
-    <p>Opting out means AdMob will serve non-personalised ads rather than no ads. Purchasing Platinum in WordNerd removes all ads entirely.</p>
+    <p>Opting out means AdMob will serve non-personalised ads rather than no ads. Purchasing Platinum in WordNerd, or Pro in SiteNerd, removes all ads entirely.</p>
   </div>
 
   <!-- 12 -->
@@ -515,8 +558,8 @@
 </main>
 
 <footer>
-  <p>© 2026 KreedoMarvel · <b>Privacy Policy v2.1</b> · Effective May 2026</p>
-  <p style="margin-top:.4rem;">Covers: WordNerd — Vocabulary Flashcards 	·	 ActOut: Desi Charades 	· 	Tick Talk Tambola</p>
+  <p>© 2026 KreedoMarvel · <b>Privacy Policy v2.2</b> · Effective May 2026</p>
+  <p style="margin-top:.4rem;">Covers: WordNerd: Vocabulary Flashcards · ActOut: Desi Charades · Tick Talk Tambola · SiteNerd: Construction Calc</p>
 </footer>
 
 </body>
