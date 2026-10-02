@@ -15,6 +15,7 @@
       --teal:       #0F9B8E;
       --gold:       #F5A623;
       --ember:      #F28C28;       --pickle:     #0A7C42;
+      --riposo:     #8E7CC3;
       --white:      #F0F4F8;
       --muted:      #8892A4;
       --border:     rgba(240,244,248,0.09);
@@ -164,6 +165,7 @@
     .app-card.ao::before  { background: var(--gold); }
     .app-card.tt::before  { background: var(--teal); }
     .app-card.sn::before  { background: var(--ember); }
+    .app-card.rp::before  { background: var(--riposo); }
     .card-head {
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; gap: 8px; margin-bottom: 1.1rem;
@@ -178,6 +180,7 @@
     .ao .card-badge { color: var(--gold); background: rgba(245,166,35,.12); border: 1px solid rgba(245,166,35,.25); }
     .tt .card-badge { color: var(--teal); background: rgba(15,155,142,.12); border: 1px solid rgba(15,155,142,.25); }
     .sn .card-badge { color: var(--ember); background: rgba(242,140,40,.12); border: 1px solid rgba(242,140,40,.25); }     .ps .card-badge { color: var(--pickle); background: rgba(10,124,66,.14); border: 1px solid rgba(10,124,66,.32); }
+    .rp .card-badge { color: var(--riposo); background: rgba(142,124,195,.12); border: 1px solid rgba(142,124,195,.32); }
 
     /* TABLE */
     table { width: 100%; border-collapse: collapse; font-size: 14px; }
@@ -245,8 +248,9 @@
   <span class="tag"><span class="tag-dot" style="background:var(--nerd-red)"></span>WordNerd: Vocabulary Flashcards</span>
   <span class="tag"><span class="tag-dot" style="background:var(--gold)"></span>ActOut: Desi Charades</span>
   <span class="tag"><span class="tag-dot" style="background:var(--teal)"></span>Tick Talk Tambola</span>
-  <span class="tag"><span class="tag-dot" style="background:var(--ember)"></span>SiteNerd: Construction Calc</span>  
+  <span class="tag"><span class="tag-dot" style="background:var(--ember)"></span>SiteNerd: Construction Calc</span>
   <span class="tag"><span class="tag-dot" style="background:var(--pickle)"></span>PickleScore</span>
+  <span class="tag"><span class="tag-dot" style="background:var(--riposo)"></span>Riposo Puzzles</span>
 </div>
 
 <hr class="divider" />
@@ -262,10 +266,11 @@
       <li><strong>ActOut: Desi Charades</strong></li>
       <li><strong>Tick Talk Tambola</strong></li>
       <li><strong>SiteNerd: Construction Calc</strong> (com.kreedomarvel.sitenerd)</li>       <li><strong>PickleScore</strong> (com.kreedomarvel.picklescore)</li>
+      <li><strong>Riposo Puzzles</strong> (com.kreedomarvel.riposo)</li>
     </ul>
     <p>By installing or using any of these apps, you agree to the data practices described in this policy. If you do not agree, please do not use the Services. Questions? Email us at <a href="mailto:kreedo.tech@gmail.com">kreedo.tech@gmail.com</a>.</p>
     <div class="hl">
-      <strong>Plain English summary:</strong> We do not collect your name, email, phone number, or location. We do not require account creation. The data listed below is collected by standard third-party SDKs (Google Firebase and AdMob in WordNerd, ActOut and Tick Talk; AdMob only in SiteNerd and PickleScore, which use no Firebase at all) to keep the apps running, fix crashes, and display ads on the free tier.
+      <strong>Plain English summary:</strong> We do not collect your name, email, phone number, or location. We do not require account creation. The data listed below is collected by standard third-party SDKs (Google Firebase and AdMob in WordNerd, ActOut and Tick Talk; AdMob only in SiteNerd, PickleScore and Riposo Puzzles, which use no Firebase at all) to keep the apps running, fix crashes, and display ads on the free tier.
     </div>
   </div>
 
@@ -441,12 +446,48 @@
         </tbody>
       </table>
     </div>
+    <!-- Riposo Puzzles -->
+    <div class="app-card rp">
+      <div class="card-head">
+        <span class="card-title">Riposo Puzzles</span>
+        <span class="card-badge">Riposo</span>
+      </div>
+      <table>
+        <thead><tr><th>SDK / Data</th><th>What is collected &amp; why</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Google AdMob</td>
+            <td>Serves a board banner, puzzle-complete interstitials, optional rewarded ads, and an app-open ad to <strong>free-tier users only</strong>. Ads never appear in Riposo calm mode. AdMob collects your Android Advertising ID (AAID) and general location (country/region inferred from IP) to serve personalised ads. Consent is collected on first launch via Google's UMP form, and you can change your choice any time in the app under <em>Settings → Privacy choices</em> (where required) or opt out device-wide via <em>Settings → Google → Ads</em>. Premium users: AdMob is fully disabled, with zero ads and zero AdMob data collection.</td>
+          </tr>
+          <tr>
+            <td>No Firebase Analytics</td>
+            <td>Riposo Puzzles contains no analytics SDK. Nothing about your games is sent to Firebase or to any KreedoMarvel server.</td>
+          </tr>
+          <tr>
+            <td>No Firebase Crashlytics</td>
+            <td>Crash statistics come from Google Play Android vitals, governed by Google's policies. No crash log is uploaded by the app.</td>
+          </tr>
+          <tr>
+            <td>Google Play Billing</td>
+            <td>Processes the one-time Premium unlock payment. All payment handling is done entirely by Google. We receive only the entitlement (Premium active or not active) and never see, store, or process your payment card or billing details.</td>
+          </tr>
+          <tr>
+            <td>Local device storage <br/><small>(never transmitted)</small></td>
+            <td>Your scores, bests, streaks, themes, achievements, Challenge and Daily progress, haptics and music settings, and Premium status are stored only on your device (SharedPreferences). This data is <strong>never uploaded to any server</strong>. It is permanently deleted when you uninstall the app. The in-app Reset Progress control erases it without uninstalling.</td>
+          </tr>
+          <tr>
+            <td>Accounts, notifications, microphone</td>
+            <td>Riposo Puzzles has no accounts, no sign-in, and sends no push notifications. The background music is a bundled audio file and streams nothing. The Share button only opens the system share sheet when you tap it.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <!-- 3 -->
   <div class="sec">
     <div class="sec-head"><div class="sec-num">03</div><h2>What We Do Not Collect</h2></div>
-    <p>Across all five apps, we <strong>never</strong> collect:</p>
+    <p>Across all six apps, we <strong>never</strong> collect:</p>
     <ul>
       <li>Your name, email address, phone number, or any account credentials</li>
       <li>Your precise GPS location or IP address</li>
@@ -485,7 +526,7 @@
         </tr>
       </tbody>
     </table>
-    <p style="margin-top:1rem;">To control ad personalisation on your device: <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>. On Android 12+, you can also reset your Advertising ID or delete it entirely. SiteNerd additionally offers an in-app choice under <strong>Settings → Ad personalisation</strong>.</p>
+    <p style="margin-top:1rem;">To control ad personalisation on your device: <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>. On Android 12+, you can also reset your Advertising ID or delete it entirely. SiteNerd additionally offers an in-app choice under <strong>Settings → Ad personalisation</strong>. Riposo Puzzles asks for consent on first launch and offers <strong>Settings → Privacy choices</strong> where required.</p>
   </div>
 
   <!-- 5 -->
@@ -493,9 +534,9 @@
     <div class="sec-head"><div class="sec-num">05</div><h2>Legal Basis for Processing (GDPR - EEA &amp; UK Users)</h2></div>
     <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, the following legal bases apply to how data is processed through our apps:</p>
     <ul>
-      <li><strong>Legitimate interests</strong> - Firebase Analytics and Crashlytics (WordNerd, ActOut, Tick Talk) and Play Android vitals (SiteNerd, PickleScore) are used to improve app performance and fix crashes. This processing is in the legitimate interest of providing a stable, improving product.</li>
-      <li><strong>Consent</strong> - AdMob personalised advertising relies on your consent via your device's ad personalisation setting (and SiteNerd's in-app choice). You may withdraw consent at any time by opting out of personalised ads in your Android settings.</li>
-      <li><strong>Contract performance</strong> - Google Play Billing data is processed to fulfil your purchase of the Platinum (WordNerd) or Pro (SiteNerd, PickleScore) unlock.</li>
+      <li><strong>Legitimate interests</strong> - Firebase Analytics and Crashlytics (WordNerd, ActOut, Tick Talk) and Play Android vitals (SiteNerd, PickleScore, Riposo Puzzles) are used to improve app performance and fix crashes. This processing is in the legitimate interest of providing a stable, improving product.</li>
+      <li><strong>Consent</strong> - AdMob personalised advertising relies on your consent via your device's ad personalisation setting (and SiteNerd's in-app choice, or the Riposo Puzzles consent form on first launch). You may withdraw consent at any time by opting out of personalised ads in your Android settings.</li>
+      <li><strong>Contract performance</strong> - Google Play Billing data is processed to fulfil your purchase of the Platinum (WordNerd), Pro (SiteNerd, PickleScore) or Premium (Riposo Puzzles) unlock.</li>
     </ul>
     <div class="hl hl-warn">
       <strong>EEA / UK users:</strong> If you believe your data is being processed unlawfully, you have the right to lodge a complaint with your national data protection authority (e.g. ICO in the UK, or your EU Member State's supervisory authority).
@@ -539,7 +580,8 @@
     <div class="sec-head"><div class="sec-num">07</div><h2>Data Retention &amp; Deletion</h2></div>
     <p><strong>Local app data (WordNerd):</strong> All study progress, streaks, bookmarks, and notes are stored only on your device. Uninstalling the app permanently deletes this data. We cannot recover it once deleted.</p>
     <p><strong>Local app data (SiteNerd):</strong> All calculations, history, job folders, favorites, and settings are stored only on your device. Uninstalling the app permanently deletes this data. We cannot recover it once deleted. The optional Erase All Data control in Settings deletes it without uninstalling.</p>     <p><strong>Local app data (PickleScore):</strong> Match setup, scores, match history, settings, and Pro status are stored only on your device. Uninstalling the app permanently deletes this data. We cannot recover it once deleted. Clearing app storage in Android settings also deletes it.</p>
-    <p><strong>Firebase data:</strong> Crash reports and analytics events are retained by Google per their standard data retention policies (typically 90 days for Crashlytics, configurable for Analytics). This data is not linked to any identifiable user on our end. SiteNerd and PickleScore send nothing to Firebase.</p>
+    <p><strong>Local app data (Riposo Puzzles):</strong> Scores, streaks, themes, achievements, Challenge and Daily progress, settings, and Premium status are stored only on your device. Uninstalling the app permanently deletes this data. We cannot recover it once deleted. The Reset Progress control in Settings deletes it without uninstalling.</p>
+    <p><strong>Firebase data:</strong> Crash reports and analytics events are retained by Google per their standard data retention policies (typically 90 days for Crashlytics, configurable for Analytics). This data is not linked to any identifiable user on our end. SiteNerd, PickleScore and Riposo Puzzles send nothing to Firebase.</p>
     <p><strong>AdMob data:</strong> Ad impression and interaction data is managed by Google per their advertising data policies.</p>
     <p><strong>Payment data:</strong> We retain no payment records. All transaction history is managed by Google Play.</p>
   </div>
@@ -554,7 +596,7 @@
   <!-- 9 -->
   <div class="sec">
     <div class="sec-head"><div class="sec-num">09</div><h2>Security</h2></div>
-    <p>Because we do not transmit personal data to our own servers, the attack surface is minimal. Local data (WordNerd study data; SiteNerd calculations, history, jobs, and settings; PickleScore match history and settings) is stored in each app's private sandboxed storage on your device, inaccessible to other apps.</p>
+    <p>Because we do not transmit personal data to our own servers, the attack surface is minimal. Local data (WordNerd study data; SiteNerd calculations, history, jobs, and settings; PickleScore match history and settings; Riposo Puzzles scores, progress, achievements, and settings) is stored in each app's private sandboxed storage on your device, inaccessible to other apps.</p>
     <p>For data processed by Firebase and AdMob, Google's enterprise-grade security infrastructure applies. No electronic system is 100% secure, but we have taken reasonable steps to minimise risk within our control.</p>
   </div>
 
@@ -573,7 +615,7 @@
       <li><strong>Android 12 and above:</strong> Settings → Privacy → Ads → Delete Advertising ID</li>
       <li><strong>Android 11 and below:</strong> Settings → Google → Ads → Opt out of Ads Personalisation</li>
     </ul>
-    <p>Opting out means AdMob will serve non-personalised ads rather than no ads. Purchasing Platinum in WordNerd, or Pro in SiteNerd or PickleScore, removes all ads entirely.</p>
+    <p>Opting out means AdMob will serve non-personalised ads rather than no ads. Purchasing Platinum in WordNerd, Pro in SiteNerd or PickleScore, or Premium in Riposo Puzzles, removes all ads entirely.</p>
   </div>
 
   <!-- 12 -->
@@ -597,8 +639,8 @@
 </main>
 
 <footer>
-  <p>© 2026 KreedoMarvel · <b>Privacy Policy v2.2</b> · Effective September 2026</p>
-  <p style="margin-top:.4rem;">Covers: WordNerd: Vocabulary Flashcards · ActOut: Desi Charades · Tick Talk Tambola · SiteNerd: Construction Calc</p>
+  <p>© 2026 KreedoMarvel · <b>Privacy Policy v2.3</b> · Effective September 2026</p>
+  <p style="margin-top:.4rem;">Covers: WordNerd: Vocabulary Flashcards · ActOut: Desi Charades · Tick Talk Tambola · SiteNerd: Construction Calc · PickleScore · Riposo Puzzles</p>
 </footer>
 
 </body>
